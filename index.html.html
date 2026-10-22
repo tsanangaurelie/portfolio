@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aurelie Tsanang Temedjong | Réseau et cybersécurité</title>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D1117;--card:#151B23;--line:#263140;--ink:#F2F5F7;--muted:#C3CCD5;--g:#00FF66;--blue:#2EA8E6;--orange:#FFB020;--red:#FF3B5C;
+--f:"Courier Prime","Courier New",Courier,monospace;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:700 1.05rem/1.7 var(--f)}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+header,main,footer{position:relative;z-index:1}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:rgba(13,17,23,.92);border-bottom:1px solid var(--line);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#0D1117;z-index:6}
+.bar{max-width:1100px;margin:0 auto;padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.logo{font-size:1.35rem;color:var(--ink);text-decoration:none}.logo b{color:var(--g)}
+nav{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;padding:.15rem 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current="page"]{color:var(--g);border-color:var(--g);text-shadow:0 0 8px rgba(0,255,102,.6)}
+nav a.cta{background:var(--g);color:#04210F;padding:.5rem 1.2rem;border-radius:6px;border:0;text-shadow:none;box-shadow:0 0 16px rgba(0,255,102,.45)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:3rem 1.25rem}
+.view{display:none}.view.on{display:block}
+h1,h2,h3{font-weight:700;margin:0;line-height:1.2}
+h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);padding-bottom:.8rem;border-bottom:1px solid var(--line);display:inline-block;margin-bottom:2rem;padding-right:3rem}
+h3{color:var(--g);font-size:1.5rem;text-shadow:0 0 10px rgba(0,255,102,.35)}
+.hero{display:grid;gap:2.5rem;align-items:center;padding-top:2rem}
+
+.kick{color:var(--g)}
+.hero p{max-width:54ch;color:var(--muted)}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn{display:inline-block;padding:.7rem 1.4rem;border-radius:6px;border:1.5px solid var(--g);color:var(--g);text-decoration:none;background:transparent;font:inherit;cursor:pointer}
+.btn:hover{background:rgba(0,255,102,.12)}
+.btn.solid{background:var(--g);color:#04210F;box-shadow:0 0 16px rgba(0,255,102,.45)}
+.photo{object-fit:cover;width:260px;height:260px;max-width:100%;border-radius:50%;border:3px solid var(--g);box-shadow:0 0 28px rgba(0,255,102,.45);display:grid;place-items:center;font-size:3.5rem;color:var(--g);background:var(--card);margin:0 auto;text-align:center}
+.photo small{display:block;font-size:.8rem;color:var(--muted);padding:0 1.5rem}
+.mq{overflow:hidden;border-block:1px solid var(--line);background:rgba(21,27,35,.8)}
+.mq div{display:flex;gap:3rem;width:max-content;padding:.9rem 0;animation:mq 28s linear infinite;color:var(--g)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq div{animation:none}}
+.grid{display:grid;gap:1.5rem}
+@media(min-width:820px){.grid.c3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:2rem;box-shadow:0 0 22px rgba(0,255,102,.08)}
+.card p{margin:1rem 0;color:var(--ink)}
+.tags{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 1.4rem}
+.t{font-size:.8rem;padding:.15rem .7rem;border-radius:99px;border:1px solid}
+.t.b{color:var(--blue)}.t.o{color:var(--orange)}.t.r{color:var(--red)}.t.g{color:var(--g)}
+.mark{display:inline-block;background:var(--orange);color:#2B1B00;font-size:.8rem;padding:.1rem .6rem;border-radius:4px;margin-bottom:.8rem}
+.sec{margin-top:3.5rem}
+.lead{max-width:64ch}
+dl{margin:0}dt{color:var(--g);font-size:1.25rem}dd{margin:.2rem 0 1.5rem;color:var(--muted)}
+.cgrid{display:grid;gap:2.5rem;align-items:start}
+@media(min-width:820px){.cgrid{grid-template-columns:1fr 1fr}}
+.ci{display:flex;align-items:center;gap:.9rem;margin:1rem 0;color:var(--ink);text-decoration:none;word-break:break-word}
+.ci svg{width:22px;height:22px;flex:none;fill:var(--g)}
+.soc{display:flex;gap:.8rem;margin:1.6rem 0 2rem}
+.soc a{width:44px;height:44px;border:1.5px solid var(--muted);border-radius:8px;display:grid;place-items:center;color:var(--muted);text-decoration:none;font-size:.95rem}
+.soc a:hover{color:var(--g);border-color:var(--g)}
+.fcard h3{margin-bottom:1.2rem}
+.fcard label{display:block;font-size:.85rem;color:var(--muted);margin:1rem 0 .4rem}
+.fcard input,.fcard textarea{width:100%;background:#0A0E13;border:1px solid var(--line);border-radius:6px;color:var(--ink);font:inherit;padding:.8rem 1rem}
+.fcard input:focus,.fcard textarea:focus{outline:2px solid var(--g);outline-offset:1px}
+.fcard textarea{min-height:150px;resize:vertical}
+.fcard .btn{width:100%;margin-top:1.6rem}
+#st{font-size:.9rem;color:var(--muted);margin:.8rem 0 0}
+footer{max-width:1100px;margin:0 auto;padding:2rem 1.25rem;color:var(--muted);font-size:.9rem;text-align:center;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<header><div class="bar">
+<a class="logo" href="#accueil" data-v="accueil">&lt;aurelie<b>@portfolio</b> /&gt;</a>
+<nav aria-label="Navigation principale">
+<a href="#accueil" data-v="accueil">Accueil</a><a href="#projets" data-v="projets">Projets</a><a href="#formation" data-v="formation">Formation</a><a class="cta" href="#contact" data-v="contact">Contact</a>
+</nav></div></header>
+
+<main>
+<section class="view wrap" id="accueil">
+<div class="hero">
+<div>
+<p class="kick">Étudiante en réseau et cybersécurité</p>
+<h1>Bonjour, je suis Aurelie.</h1>
+<p>Étudiante en Bachelor 3 en réseau, programmation et sécurité informatique. Je cherche un stage ou une alternance pour appliquer mes compétences en conditions réelles. <span class="mark">Texte provisoire</span></p>
+<div class="btns"><a class="btn solid" href="#contact" data-v="contact">Me contacter</a><a class="btn" href="#projets" data-v="projets">Voir mes projets</a></div>
+</div>
+
+</div>
+</section>
+<div class="mq view on" id="mqv" aria-hidden="true"><div><span>Python</span><span>Linux</span><span>Wireshark</span><span>Cisco Packet Tracer</span><span>Java</span><span>Nmap</span><span>Kali Linux</span><span>Git</span><span>Python</span><span>Linux</span><span>Wireshark</span><span>Cisco Packet Tracer</span><span>Java</span><span>Nmap</span><span>Kali Linux</span><span>Git</span></div></div>
+
+<section class="view wrap" id="accueil2">
+<h2>Mes compétences</h2><br><span class="mark">Liste d’exemple : garde ce que tu maîtrises</span>
+<div class="grid c3">
+<div class="card"><h3>Réseau</h3><p>Adressage IP, VLAN, routage, DHCP, DNS et NAT. Conception et simulation de réseaux d’entreprise.</p></div>
+<div class="card"><h3>Sécurité</h3><p>Analyse de vulnérabilités, tests d’intrusion en laboratoire, pare-feu et surveillance du trafic.</p></div>
+<div class="card"><h3>Programmation</h3><p>Python, Java, C et scripts Bash pour automatiser des tâches et créer des outils.</p></div>
+</div>
+<div class="sec"><h2>À propos</h2><br><span class="mark">Texte provisoire</span>
+<p class="lead">Je suis passionnée par le fonctionnement des réseaux et par leur protection. Je préfère comprendre un système en profondeur, repérer ses failles, puis proposer des solutions concrètes. Je suis motivée, rigoureuse et curieuse.</p></div>
+</section>
+
+<section class="view wrap" id="projets">
+<h2>Projets</h2>
+<div class="grid c3">
+<article class="card"><h3>Réseau sécurisé d’une PME</h3><p>Conception et simulation sous Cisco Packet Tracer du réseau d’une PME : 50 équipements répartis sur 9 VLAN, routage inter-VLAN, DHCP, pare-feu Cisco ASA, et Wi-Fi invités isolé des réseaux internes par une liste de contrôle d’accès.</p><div class="tags"><span class="t b">Packet Tracer</span><span class="t o">VLAN</span><span class="t r">ACL</span><span class="t g">Cisco ASA</span><span class="t b">DHCP</span></div></article>
+<article class="card"><span class="mark">Exemple à remplacer</span><h3>Audit de sécurité en laboratoire</h3><p>Découverte des machines, détection des failles et rapport de recommandations sur un environnement de test.</p><div class="tags"><span class="t b">Kali Linux</span><span class="t r">Metasploit</span><span class="t g">Nmap</span></div></article>
+<article class="card"><span class="mark">Exemple à remplacer</span><h3>Surveillance de connexions</h3><p>Script qui analyse les connexions d’un serveur et signale les tentatives suspectes.</p><div class="tags"><span class="t b">Python</span><span class="t o">Bash</span><span class="t g">Linux</span></div></article>
+</div>
+</section>
+
+<section class="view wrap" id="formation">
+<h2>Formation</h2>
+<dl>
+<dt>Bachelor 3 : Réseau, programmation et sécurité informatique</dt>
+<dd>Établissement et année universitaire à compléter. <span class="mark">À compléter</span></dd>
+</dl>
+</section>
+
+<section class="view wrap" id="contact">
+<h2>Me contacter</h2>
+<div class="cgrid">
+<div>
+<p class="lead">Je recherche un stage ou une alternance en réseau, cybersécurité ou développement. N’hésitez pas à m’écrire.</p>
+<a class="ci" href="mailto:tsanangaurelie@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4 7.5V8l8 5 8-5v-.5L12 12z"/></svg>tsanangaurelie@gmail.com</a>
+<div class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>+237 6 78 73 05 63</span></div>
+<div class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg><span>Douala, Cameroun</span></div>
+<div class="soc">
+<a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://github.com/tsanangaurelie" aria-label="GitHub">GH</a><a href="#contact" aria-label="Terminal">&gt;_</a>
+</div>
+<p><span class="mark">Remplace le lien LinkedIn par le tien</span></p>
+<a class="btn" href="cv.pdf" download="CV-Aurelie-Tsanang.pdf" id="cv">Télécharger mon CV</a>
+</div>
+<div class="card fcard">
+<h3>&gt;_ Envoyer un message</h3>
+<form id="cf">
+<label for="nom">Nom :</label><input id="nom" name="nom" placeholder="Entrez votre nom" required>
+<label for="mail">Email :</label><input id="mail" name="mail" type="email" placeholder="Entrez votre email" required>
+<label for="msg">Message :</label><textarea id="msg" name="msg" placeholder="Écrivez votre message..." required></textarea>
+<button class="btn" type="submit">Envoyer le message</button>
+<p id="st" role="status"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer>© 2026 Tsanang Temedjong Aurelie</footer>
+
+<script>
+(function(){
+var names=["accueil","projets","formation","contact"];
+function show(n){
+  if(names.indexOf(n)<0)n="accueil";
+  document.querySelectorAll("section.view").forEach(function(s){s.classList.remove("on")});
+  document.getElementById("mqv").classList.remove("on");
+  document.getElementById(n).classList.add("on");
+  if(n==="accueil"){document.getElementById("mqv").classList.add("on");document.getElementById("accueil2").classList.add("on")}
+  document.querySelectorAll("nav a").forEach(function(a){
+    if(a.dataset.v===n)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  window.scrollTo(0,0);
+}
+document.querySelectorAll("[data-v]").forEach(function(a){
+  a.addEventListener("click",function(e){e.preventDefault();show(a.dataset.v)})});
+show((location.hash||"").replace("#",""));
+
+var f=document.getElementById("cf");
+f.addEventListener("submit",function(e){
+  e.preventDefault();
+  var a=document.createElement("a");
+  a.href="mailto:tsanangaurelie@gmail.com?subject="+encodeURIComponent("Message de "+f.nom.value)+"&body="+encodeURIComponent(f.msg.value+"\n\n"+f.nom.value+" ("+f.mail.value+")");
+  a.target="_top";document.body.appendChild(a);a.click();a.remove();
+  document.getElementById("st").textContent="Ton application mail va s’ouvrir. Sinon, écris directement à tsanangaurelie@gmail.com.";
+});
+var c=document.getElementById("bg"),x=c.getContext("2d"),W,H,P=[];
+var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight;
+  var n=Math.min(70,Math.floor(W*H/18000));P=[];
+  for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25})}
+function draw(){
+  x.clearRect(0,0,W,H);
+  for(var i=0;i<P.length;i++){
+    var p=P[i];
+    if(!reduce){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+    for(var j=i+1;j<P.length;j++){
+      var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);
+      if(d<170){x.strokeStyle="rgba(0,255,102,"+(0.28*(1-d/170))+")";x.lineWidth=1;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}
+    }
+    x.fillStyle="rgba(0,255,102,.6)";x.beginPath();x.arc(p.x,p.y,1.8,0,6.3);x.fill();
+  }
+  if(!reduce)requestAnimationFrame(draw);
+}
+size();draw();
+addEventListener("resize",function(){size();if(reduce)draw()});
+})();
+</script>
+</body>
+</html>
